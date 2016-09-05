@@ -1,5 +1,12 @@
 from Model.contacts import Contacts
 
 
-def test_modify_contact(app):
-    app.contacts.modify(Contacts(first_name='Adam', last_name='West', initials='AW', nickname='Ad', home_phone='123123441', email='west_ad@gmnail.com'))
+def test_modify_contacts_first_name(app):
+    if app.contacts.count() == 0:
+        app.contacts.add(Contacts(first_name='Igor',last_name='Rogi',email='rogi@gmail.com'))
+    app.contacts.modify(Contacts(first_name = 'Vasya'))
+
+
+
+def test_modify_contacts_last_name(app):
+   app.contacts.modify(Contacts(last_name ='Adam'))

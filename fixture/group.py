@@ -23,7 +23,6 @@ class GroupHelper:
         self.change_field_value("group_header", Group.header)
         self.change_field_value("group_footer", Group.footer)
 
-
     def change_field_value(self, group_name, text):
         wd = self.app.wd
         if text is not None:
