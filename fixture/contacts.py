@@ -35,8 +35,15 @@ class ContactHelper:
         #submit changes
         wd.find_element_by_name("update").click()
 
+    def wait(self, url_string, elem_name):
+        wd = self.app.wd
+        if not (wd.current_url.endswith(url_string) and len(wd.find_elements_by_name(elem_name)) > 0):
+            wd.implicitly_wait(5)
+        return
+
     def select_first_contact(self):
         wd = self.app.wd
+        self.wait("addressbook/","maintable")
         wd.find_element_by_name("selected[]").click()
 
     def delete(self):
