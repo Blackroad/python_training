@@ -37,8 +37,9 @@ class ContactHelper:
 
     def wait(self, url_string, elem_name):
         wd = self.app.wd
-        if not (wd.current_url.endswith(url_string) and len(wd.find_elements_by_name(elem_name)) > 0):
-            wd.implicitly_wait(5)
+        while (wd.current_url.endswith(url_string) and len(wd.find_elements_by_name(elem_name)) > 0):
+            pass
+        wd.implicitly_wait(5)
         return
 
     def select_first_contact(self):
