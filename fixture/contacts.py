@@ -1,3 +1,5 @@
+from Model.contacts import Contacts
+
 class ContactHelper:
     def __init__(self,app):
         self.app = app
@@ -7,6 +9,7 @@ class ContactHelper:
         wd.find_element_by_link_text("add new").click()
         self.fill_contact_form(Contacts)
         wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
+
 
     def fill_contact_form(self, Contacts):
         wd = self.app.wd
@@ -34,6 +37,7 @@ class ContactHelper:
         self.fill_contact_form(new_contacts_data)
         #submit changes
         wd.find_element_by_name("update").click()
+        self.wait("addressbook/", "maintable")
 
     def wait(self, url_string, elem_name):
         wd = self.app.wd
@@ -44,7 +48,6 @@ class ContactHelper:
 
     def select_first_contact(self):
         wd = self.app.wd
-        self.wait("addressbook/","maintable")
         wd.find_element_by_name("selected[]").click()
 
     def delete(self):
@@ -55,9 +58,22 @@ class ContactHelper:
         wd.find_element_by_xpath("//div[@id='content']/form[2]/div[2]/input").click()
         wd.switch_to_alert().accept()
 
+
+
+
     def count(self):
         wd = self.app.wd
         return len(wd.find_elements_by_name("selected[]"))
+
+    def get_contact_list(self):
+        wd = self.app.wd
+        self.wait("addressbook/", "maintable")
+        contacts = []
+        for element in wd.find_elements_by_name("entry"):
+            id = element.find_element_by_name("selected[]").get_attribute("value")
+            text = element.text
+            contacts.append(Contacts(first_name=text, id=id))
+        return contacts
 
 
 
