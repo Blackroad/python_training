@@ -12,6 +12,7 @@ class ContactHelper:
         self.contact_cache = None
 
 
+
     def fill_contact_form(self, Contacts):
         wd = self.app.wd
         self.change_field_value("firstname", Contacts.firstname)
@@ -21,6 +22,7 @@ class ContactHelper:
         self.change_field_value("home", Contacts.homephone)
         self.change_field_value("email", Contacts.email)
 
+
     def change_field_value(self,field_name,text):
         wd = self.app.wd
         if text is not None:
@@ -28,15 +30,12 @@ class ContactHelper:
             wd.find_element_by_name(field_name).clear()
             wd.find_element_by_name(field_name).send_keys(text)
 
-    def modify(self, new_contacts_data):
+
+    def modify_contact_by_index(self, index, new_contacts_data):
         wd = self.app.wd
-        #select fist contact in list
-        self.select_first_contact()
-        #click 'edit' control
+        self.select_contact_by_index(index)
         wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img").click()
-        #modify contact fields
         self.fill_contact_form(new_contacts_data)
-        #submit changes
         wd.find_element_by_name("update").click()
         self.wait("addressbook/", "maintable")
         self.contact_cache = None
@@ -46,23 +45,27 @@ class ContactHelper:
         while (wd.current_url.endswith(url_string) and len(wd.find_elements_by_name(elem_name)) > 0):
             pass
         wd.implicitly_wait(5)
+
         return
 
-    def select_first_contact(self):
+    def select_contact_by_index(self,index):
         wd = self.app.wd
-        wd.find_element_by_name("selected[]").click()
+        wd.find_elements_by_name("selected[]")[index].click()
 
-    def delete(self):
+
+    def delete_contact_by_index(self, index):
         wd = self.app.wd
         # select fist contact in list
-        self.select_first_contact()
+        self.select_contact_by_index(index)
         # click 'delete' control
-        wd.find_element_by_xpath("//div[@id='content']/form[2]/div[2]/input").click()
+        wd.find_elements_by_xpath("//div[@id='content']/form[2]/div[2]/input").click()
         wd.switch_to_alert().accept()
         self.contact_cache = None
 
 
-
+    def select_first_contact(self):
+        wd = self.app.wd
+        self.modify_contact_by_index(0)
 
     def count(self):
         wd = self.app.wd
