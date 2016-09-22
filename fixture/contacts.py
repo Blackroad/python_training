@@ -34,7 +34,7 @@ class ContactHelper:
     def modify_contact_by_index(self, index, new_contacts_data):
         wd = self.app.wd
         self.select_contact_by_index(index)
-        wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img").click()
+        self.select_edit_by_index(index)
         self.fill_contact_form(new_contacts_data)
         wd.find_element_by_name("update").click()
         self.wait("addressbook/", "maintable")
@@ -52,13 +52,16 @@ class ContactHelper:
         wd = self.app.wd
         wd.find_elements_by_name("selected[]")[index].click()
 
+    def select_edit_by_index(self,index):
+        wd = self.app.wd
+        wd.find_element_by_xpath(".//*[@id='maintable']/tbody/tr["+ str(index+2) +"]/td[8]/a/img").click()
+
 
     def delete_contact_by_index(self, index):
         wd = self.app.wd
         # select fist contact in list
         self.select_contact_by_index(index)
-        # click 'delete' control
-        wd.find_elements_by_xpath("//div[@id='content']/form[2]/div[2]/input").click()
+        wd.find_element_by_xpath("//div[@id='content']/form[2]/div[2]/input").click()
         wd.switch_to_alert().accept()
         self.contact_cache = None
 
