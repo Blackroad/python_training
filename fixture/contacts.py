@@ -1,4 +1,6 @@
 from Model.contacts import Contacts
+import re
+
 
 class ContactHelper:
     def __init__(self,app):
@@ -19,6 +21,12 @@ class ContactHelper:
         self.change_field_value("nickname", Contacts.nickname)
         self.change_field_value("home", Contacts.homephone)
         self.change_field_value("email", Contacts.email)
+        self.change_field_value("mobile", Contacts.mobilephone)
+        self.change_field_value("work", Contacts.workphone)
+        self.change_field_value("fax", Contacts.fax)
+        self.change_field_value("phone2", Contacts.secondaryphone)
+
+
 
     def change_field_value(self,field_name,text):
         wd = self.app.wd
@@ -59,6 +67,13 @@ class ContactHelper:
         wd.switch_to_alert().accept()
         self.contact_cache = None
 
+    def view_contact_profile_by_index(self,index):
+        wd = self.app.wd
+        self.app.open_home_page()
+        row = wd.find_elements_by_name("entry")[index]
+        cell = row.find_elements_by_tag_name('td')[6]
+        cell.find_element_by_tag_name('a').click()
+
     def select_first_contact(self):
         wd = self.app.wd
         self.modify_contact_by_index(0)
@@ -75,12 +90,42 @@ class ContactHelper:
             self.wait("addressbook/", "maintable")
             self.contact_cache = []
             for element in wd.find_elements_by_name("entry"):
-                id = element.find_element_by_name("selected[]").get_attribute("value")
                 cells = element.find_elements_by_tag_name("td")
+                id = cells[0].find_element_by_tag_name("input").get_attribute("value")
+                all_phones = cells[5].text.splitlines()
                 firstname = cells[2].text
                 lastname = cells[1].text
-                self.contact_cache.append(Contacts(first_name=firstname, last_name=lastname, id=id))
+                self.contact_cache.append(Contacts(first_name=firstname, last_name=lastname, id=id, home_phone= all_phones[0],mobilephone=all_phones[1],
+                                                   workphone=all_phones[2], secondaryphone=all_phones[3]))
         return list(self.contact_cache)
+
+    def contact_info_from_edit_page(self,index):
+        wd = self.app.wd
+        self.app.open_home_page()
+        self.select_edit_by_index(index)
+        firstname = wd.find_element_by_name("firstname").get_attribute("value")
+        lastname = wd.find_element_by_name("lastname").get_attribute("value")
+        id = wd.find_element_by_name("id").get_attribute("value")
+        homephone = wd.find_element_by_name("home").get_attribute("value")
+        workphone = wd.find_element_by_name("work").get_attribute("value")
+        mobilephone = wd.find_element_by_name("mobile").get_attribute("value")
+        secondaryphone = wd.find_element_by_name("phone2").get_attribute("value")
+        return Contacts(first_name = firstname , last_name = lastname, id=id, home_phone = homephone,
+                       mobilephone = mobilephone, workphone = workphone, secondaryphone = secondaryphone)
+
+    def get_contact_from_view_page(self,index):
+        wd = self.app.wd
+        self.view_contact_profile_by_index(index)
+        text = wd.find_element_by_id("content").text
+        homephone = re.search("H: (.*)",text).group(1)
+        workphone = re.search("W: (.*)", text).group(1)
+        mobilephone = re.search("M: (.*)", text).group(1)
+        fax =re.search("F: (.*)",text).group(1)
+        secondaryphone =re.search("P: (.*)",text).group(1)
+        return Contacts(id=id, home_phone=homephone,mobilephone=mobilephone, workphone=workphone, secondaryphone=secondaryphone)
+
+
+
 
 
 
