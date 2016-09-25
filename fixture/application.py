@@ -6,7 +6,7 @@ from fixture.contacts import ContactHelper
 
 class Application:
 
-    def __init__(self, browser, base_url):
+    def __init__(self, browser, base_url, password):
         if browser == "firefox":
             self.wd = webdriver.Firefox()
         elif browser == "chrome":
@@ -19,6 +19,9 @@ class Application:
         self.group = GroupHelper(self)
         self.contacts = ContactHelper(self)
         self.base_url = base_url
+        self.password = password
+        if password is None:
+            raise ValueError("Empty password! Input password to --password option")
 
     def open_home_page(self):
         wd = self.wd
