@@ -4,15 +4,33 @@ import pytest
 import random
 import string
 
-def random_string(prefix,maxlen):
-    symbols = string.ascii_letters + string.digits + string.punctuation + " "*10
-    return prefix + "".join([random.choice(symbols) for i in range(random.randrange(maxlen))])
+def random_string(prefix,maxlen,symbols=None,digits=None):
+    if symbols != None:
+        symbols = string.ascii_letters + " "*10
+        return prefix + "".join([random.choice(symbols) for i in range(random.randrange(maxlen))])
+    elif digits !=None:
+        digits = string.digits + "-"*3 + "+"
+        return prefix + "".join([random.choice(digits) for i in range(random.randrange(maxlen))])
+    else:
+        all = string.ascii_letters + string.digits +  string.punctuation + " "*10
+        return prefix + "".join([random.choice(all) for i in range(random.randrange(maxlen))])
 
-testdata = [Contacts(first_name='ADt',last_name='vadddda',nickname='fsse',home_phone='Home[123441]',
-                       workphone='+work(231241)', mobilephone='m127-331-233', fax = 'fax21737', secondaryphone= '+33123',
-                       address='london st123,ap2',address2='New York ap123',
-                       email='email144@gmail.com',email2='email123@gmail.com',email3='email3@yandex.ru') for x in range(2)] + \
-           [Contacts(first_name='', last_name='', initials='', nickname='', home_phone='', email='')
+
+
+
+testdata = [Contacts(first_name=random_string('name',10),last_name=random_string('s_name',7),
+                     nickname=random_string('n_name',6,symbols=1),
+                     home_phone=random_string('phone',5,digits=1),
+                     workphone=random_string('w_phone',5,digits=1),
+                     mobilephone=random_string('m_phone',5,digits=1),
+                     fax = random_string('n_name',6,digits=1),
+                     secondaryphone= random_string('s_phone',6,digits=1),
+                     address= random_string('address',6),
+                     address2= random_string('address2',6),
+                     email= random_string('mail1@',6),
+                     email2= random_string('mail2@',6),
+                     email3= random_string('mail3@',6))
+            for x in range(2)] + [Contacts(first_name='', last_name='', initials='', nickname='', home_phone='', email='')
             for y in range(2)]
 
 @pytest.mark.parametrize("contact",testdata, ids=[repr(x) for x in testdata])
