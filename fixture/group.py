@@ -85,7 +85,7 @@ class GroupHelper:
         self.open_groups_page()
         return len(wd.find_elements_by_name("selected[]"))
 
-      
+
 
     group_cache = None
 
