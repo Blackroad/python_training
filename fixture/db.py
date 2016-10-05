@@ -5,10 +5,8 @@ class Dbfixture:
         self.host = host
         self.name = name
         self.user = user
-        self.password = password
+        self.password =password
         self.connection = pymysql.connect(host=host, database=name, user=user, password=password)
-        self.connection.autocommit(True)
-
 
 
     def get_group_list(self):
@@ -22,9 +20,6 @@ class Dbfixture:
         finally:
             cursor.close()
         return list
-
-
-
 
 
     def destroy(self):
