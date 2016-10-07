@@ -2,6 +2,8 @@ from Model.contacts import Contacts
 import re
 
 
+
+
 class ContactHelper:
     def __init__(self,app):
         self.app = app
@@ -59,14 +61,25 @@ class ContactHelper:
         wd = self.app.wd
         wd.find_elements_by_name("selected[]")[index].click()
 
+
+    def select_contact_by_id(self,id):
+        wd = self.app.wd
+        wd.find_element_by_xpath(".//*[@id='%s']" % id).click()
+
     def select_edit_by_index(self,index):
         wd = self.app.wd
         wd.find_element_by_xpath(".//*[@id='maintable']/tbody/tr["+ str(index+2) +"]/td[8]/a/img").click()
 
     def delete_contact_by_index(self, index):
         wd = self.app.wd
-        # select fist contact in list
         self.select_contact_by_index(index)
+        wd.find_element_by_xpath("//div[@id='content']/form[2]/div[2]/input").click()
+        wd.switch_to_alert().accept()
+        self.contact_cache = None
+
+    def delete_contact_by_id(self, id):
+        wd = self.app.wd
+        self.select_contact_by_id(id)
         wd.find_element_by_xpath("//div[@id='content']/form[2]/div[2]/input").click()
         wd.switch_to_alert().accept()
         self.contact_cache = None
@@ -84,6 +97,7 @@ class ContactHelper:
 
     def count(self):
         wd = self.app.wd
+        self.app.open_home_page()
         return len(wd.find_elements_by_name("selected[]"))
 
     contact_cache = None
