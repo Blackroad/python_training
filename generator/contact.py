@@ -34,7 +34,7 @@ def random_string(prefix,maxlen,symbols=None,digits=None):
         all = string.ascii_letters + string.digits +  string.punctuation + " "*10
         return prefix + "".join([random.choice(all) for i in range(random.randrange(maxlen))])
 
-testdata = [Contacts(first_name=random_string('name',10),last_name=random_string('s_name',7),
+testdata = [Contacts(firstname=random_string('name', 10), lastname=random_string('s_name', 7),
                      nickname=random_string('n_name',6,symbols=1),
                      home_phone=random_string('phone',5,digits=1),
                      workphone=random_string('w_phone',5,digits=1),
@@ -46,7 +46,7 @@ testdata = [Contacts(first_name=random_string('name',10),last_name=random_string
                      email= random_string('mail1@',6),
                      email2= random_string('mail2@',6),
                      email3= random_string('mail3@',6))
-            for x in range(n)] + [Contacts(first_name='', last_name='', initials='', nickname='', home_phone='', email='')
+            for x in range(n)] + [Contacts(firstname='', lastname='', initials='', nickname='', home_phone='', email='')
             for y in range(n)]
 
 
