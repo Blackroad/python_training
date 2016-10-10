@@ -50,6 +50,15 @@ class ContactHelper:
         self.wait("addressbook/", "maintable")
         self.contact_cache = None
 
+    def modify_contact_by_id(self, id, new_contacts_data):
+        wd = self.app.wd
+       # self.select_contact_by_index(id)
+        self.select_edit_by_id(id)
+        self.fill_contact_form(new_contacts_data)
+        wd.find_element_by_name("update").click()
+        self.wait("addressbook/", "maintable")
+        self.contact_cache = None
+
     def wait(self, url_string, elem_name):
         wd = self.app.wd
         while (wd.current_url.endswith(url_string) and len(wd.find_elements_by_name(elem_name)) > 0):
@@ -69,6 +78,11 @@ class ContactHelper:
     def select_edit_by_index(self,index):
         wd = self.app.wd
         wd.find_element_by_xpath(".//*[@id='maintable']/tbody/tr["+ str(index+2) +"]/td[8]/a/img").click()
+
+    def select_edit_by_id(self,id):
+        wd = self.app.wd
+        wd.find_element_by_xpath('//a[@href="edit.php?id=%s"]' % id).click()
+
 
     def delete_contact_by_index(self, index):
         wd = self.app.wd
