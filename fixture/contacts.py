@@ -136,7 +136,7 @@ class ContactHelper:
         email = wd.find_element_by_name("email").get_attribute("value")
         email2 = wd.find_element_by_name("email2").get_attribute("value")
         email3 = wd.find_element_by_name("email3").get_attribute("value")
-        return Contacts(firstname= firstname, lastname= lastname, id=id, home_phone = homephone,
+        return Contacts(firstname= firstname, lastname= lastname, id=id, homephone= homephone,
                         mobilephone = mobilephone, workphone = workphone, secondaryphone = secondaryphone,
                         address = address, email = email, email2 = email2, email3 = email3)
 
@@ -149,7 +149,7 @@ class ContactHelper:
         mobilephone = re.search("M: (.*)", text).group(1)
         fax =re.search("F: (.*)",text).group(1)
         secondaryphone =re.search("P: (.*)",text).group(1)
-        return Contacts(id=id, home_phone=homephone,mobilephone=mobilephone, workphone=workphone, secondaryphone=secondaryphone)
+        return Contacts(id=id, homephone=homephone, mobilephone=mobilephone, workphone=workphone, secondaryphone=secondaryphone)
 
 
 

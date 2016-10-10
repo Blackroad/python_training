@@ -1,8 +1,9 @@
 import pymysql.cursors
-from fixture.orm import ORMFixture
+#from fixture.orm import ORMFixture
+from fixture.db import Dbfixture
 from Model.group import Group
 
-db = ORMFixture(host='127.0.0.1', name='addressbook', user='root', password='')
+db = Dbfixture(host='127.0.0.1', name='addressbook', user='root', password='')
 
 try:
     l = db.get_contact_list()

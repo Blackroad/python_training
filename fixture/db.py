@@ -28,10 +28,15 @@ class Dbfixture:
         contact_list = []
         cursor = self.connection.cursor()
         try:
-            cursor.execute("select id, firstname, lastname from addressbook where deprecated ='0000-00-00 00:00:00'")
+            cursor.execute("select id, firstname, lastname, email, email2, email3, address, work, home, phone2, mobile from addressbook where deprecated ='0000-00-00 00:00:00'")
             for row in cursor:
-                (id, firstname, lastname) = row
-                contact_list.append(Contacts(id=str(id), firstname= firstname, lastname=lastname))
+                (id, firstname, lastname, email, email2, email3, address, work, home, phone2, mobile) = row
+                contact_list.append(Contacts(id=str(id), firstname= firstname, lastname=lastname,
+                                             email=email, email2=email2, email3=email3,
+                                             address=address,
+                                             workphone=work, homephone=home,secondaryphone=phone2,
+                                             mobilephone=mobile))
+
         finally:
             cursor.close()
         return contact_list
