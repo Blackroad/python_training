@@ -13,14 +13,24 @@ class ContactHelper:
         wd.find_element_by_link_text("add new").click()
         self.fill_contact_form(Contacts)
         wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
+        self.app.open_home_page()
         self.contact_cache = None
 
     def add_to_group(self,id):
         wd = self.app.wd
         self.select_contact_by_id(id)
+        self.select_group_for_contact_by_id()
         wd.find_element_by_name('add').click()
         self.app.open_home_page()
         self.contact_cache = None
+
+
+    def select_group_for_contact_by_id(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//select[@name='to_group']/option[@value='24']").click()
+
+
+
 
     def fill_contact_form(self, Contacts):
         wd = self.app.wd

@@ -46,8 +46,7 @@ testdata = [Contacts(firstname=random_string('name', 10), lastname=random_string
                      email= random_string('mail1@',6),
                      email2= random_string('mail2@',6),
                      email3= random_string('mail3@',6))
-            for x in range(n)] + [Contacts(firstname='', lastname='', initials='', nickname='', homephone='', email='')
-            for y in range(n)]
+            for x in range(n)]
 
 
 file = os.path.join(os.path.dirname(os.path.abspath(__file__)),"..",f)

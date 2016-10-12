@@ -36,10 +36,10 @@ class Dbfixture:
                                              address=address,
                                              workphone=work, homephone=home,secondaryphone=phone2,
                                              mobilephone=mobile))
-
         finally:
             cursor.close()
         return contact_list
+
 
 
     def destroy(self):
