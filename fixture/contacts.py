@@ -1,5 +1,8 @@
 from Model.contacts import Contacts
+import random
 import re
+
+
 
 
 
@@ -114,6 +117,23 @@ class ContactHelper:
         wd.find_element_by_xpath("//div[@id='content']/form[2]/div[2]/input").click()
         wd.switch_to_alert().accept()
         self.contact_cache = None
+
+    def del_from_group_by_id(self, id):
+        wd = self.app.wd
+        self.select_contact_by_id(id)
+        wd.find_element_by_name('remove').click()
+        self.app.open_home_page()
+        self.contact_cache = None
+
+    def select_group_for_contact_deletion_by_id(self,id):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//select[@name='group']/option[@value='%s']" % id).click()
+
+    def select_all_contacts(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//select[@name='group']/option[@value=[all]]" ).click()
+
+
 
     def view_contact_profile_by_index(self,index):
         wd = self.app.wd
