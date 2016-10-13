@@ -1,17 +1,20 @@
 # -*- coding: utf-8 -*-
 import random
 from fixture.group import Group
+from fixture.contacts import Contacts
 from fixture.orm import ORMFixture
 
+db = ORMFixture(host='127.0.0.1', name='addressbook', user='root', password='')
 
-def test_add_contact_to_group(app,db):
-    db = ORMFixture(host='127.0.0.1', name='addressbook', user='root', password='')
-    old_contacts = db.get_contacts_in_group(Group(id='24'))
-    contact = random.choice(db.get_contact_list())
-    app.contacts.add_to_group(contact.id)
-    old_contacts.append(contact)
-    new_contacts = db.get_contacts_in_group(Group(id='24'))
-    assert sorted(old_contacts, key=Group.id_or_max) == sorted(new_contacts, key=Group.id_or_max)
+def test_add_contact_to_group(app,json_contacts):
+     groups_n = random.choice(db.get_group_list())
+     contacts_n = json_contacts
+     if len(db.get_contact_list())==0 or len(db.get_contacts_not_in_group(Group(id='%s' % groups_n.id)))==0:
+         app.contacts.add(contacts_n)
+     list_contacts = db.get_contacts_in_group(Group(id='%s' % groups_n.id))
+     contact = random.choice(db.get_contacts_not_in_group(Group(id='%s' % groups_n.id)))
+     app.contacts.add_to_group(contact.id,groups_n.id)
+     list_contacts.append(contact)
+     new_list_contacts = db.get_contacts_in_group(Group(id='%s' % groups_n.id))
+     assert sorted(list_contacts, key=Contacts.id_or_max) == sorted(new_list_contacts, key=Contacts.id_or_max)
 
-    #old_contacts.append(contact)
-    #assert sorted(old_contacts, key=Contacts.id_or_max) == sorted(new_contacts, key=Contacts.id_or_max)

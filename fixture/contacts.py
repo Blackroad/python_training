@@ -16,18 +16,18 @@ class ContactHelper:
         self.app.open_home_page()
         self.contact_cache = None
 
-    def add_to_group(self,id):
+    def add_to_group(self, contact_id, group_id):
         wd = self.app.wd
-        self.select_contact_by_id(id)
-        self.select_group_for_contact_by_id()
+        self.select_contact_by_id(contact_id)
+        self.select_group_for_contact_by_id(group_id)
         wd.find_element_by_name('add').click()
         self.app.open_home_page()
         self.contact_cache = None
 
 
-    def select_group_for_contact_by_id(self):
+    def select_group_for_contact_by_id(self,id):
         wd = self.app.wd
-        wd.find_element_by_xpath("//select[@name='to_group']/option[@value='24']").click()
+        wd.find_element_by_xpath("//select[@name='to_group']/option[@value='%s']" %id).click()
 
 
 
