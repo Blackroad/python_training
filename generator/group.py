@@ -25,7 +25,7 @@ for o, a in opts:
 
 def random_string(prefix,maxlen,symbols=None,digits=None):
     if symbols != None:
-        symbols = string.ascii_letters + " "*10
+        symbols = string.ascii_letters + " "*3
         return prefix + "".join([random.choice(symbols) for i in range(random.randrange(maxlen))])
     elif digits !=None:
         digits = string.digits + "-"*3
@@ -35,7 +35,7 @@ def random_string(prefix,maxlen,symbols=None,digits=None):
         return prefix + "".join([random.choice(all) for i in range(random.randrange(maxlen))])
 
 
-testdata = [Group(name=random_string('name',4,symbols=1), header=random_string("header",5,symbols=1), footer=random_string("footer",5,symbols=1))
+testdata = [Group(name=random_string('name',3,symbols=1), header=random_string("header",3,symbols=1), footer=random_string("footer",3,symbols=1))
             for i in range(n)]
 
 file = os.path.join(os.path.dirname(os.path.abspath(__file__)),"..",f)
