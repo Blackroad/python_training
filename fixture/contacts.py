@@ -97,7 +97,7 @@ class ContactHelper:
 
     def select_edit_by_id(self,id):
         wd = self.app.wd
-        wd.find_element_by_xpath.click()
+        wd.find_element_by_xpath(".//*[@href='edit.php?id=%s']" %id).click()
 
 
     def delete_contact_by_index(self, index):
