@@ -3,10 +3,6 @@ import random
 import re
 
 
-
-
-
-
 class ContactHelper:
     def __init__(self,app):
         self.app = app
@@ -101,7 +97,7 @@ class ContactHelper:
 
     def select_edit_by_id(self,id):
         wd = self.app.wd
-        wd.find_element_by_xpath('//a[@href="edit.php?id=%s"]' % id).click()
+        wd.find_element_by_xpath.click()
 
 
     def delete_contact_by_index(self, index):
