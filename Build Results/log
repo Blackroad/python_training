@@ -1,0 +1,54 @@
+Started by user [8mha:AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Building in workspace C:\Users\vladyslav.velychko\.jenkins\workspace\addressbook bdd tests
+ > C:\Program Files\Git\bin\git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > C:\Program Files\Git\bin\git.exe config remote.origin.url https://github.com/Blackroad/python_training # timeout=10
+Fetching upstream changes from https://github.com/Blackroad/python_training
+ > C:\Program Files\Git\bin\git.exe --version # timeout=10
+ > C:\Program Files\Git\bin\git.exe fetch --tags --progress https://github.com/Blackroad/python_training +refs/heads/*:refs/remotes/origin/*
+ > C:\Program Files\Git\bin\git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > C:\Program Files\Git\bin\git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision 2e8eef447e2da60a5f38c3b83e2abe52b77c577d (refs/remotes/origin/master)
+ > C:\Program Files\Git\bin\git.exe config core.sparsecheckout # timeout=10
+ > C:\Program Files\Git\bin\git.exe checkout -f 2e8eef447e2da60a5f38c3b83e2abe52b77c577d
+ > C:\Program Files\Git\bin\git.exe rev-list 2e8eef447e2da60a5f38c3b83e2abe52b77c577d # timeout=10
+[addressbook bdd tests] $ cmd.exe /c call C:\Users\VLADYS~1.VEL\AppData\Local\Temp\shiningpanda2100741206123388640.bat
+
+C:\Users\vladyslav.velychko\.jenkins\workspace\addressbook bdd tests>pip install -r requirements.txt 
+Requirement already satisfied (use --upgrade to upgrade): pytest in c:\users\vladyslav.velychko\.jenkins\shiningpanda\jobs\52b83487\virtualenvs\d41d8cd9\lib\site-packages (from -r requirements.txt (line 1))
+Requirement already satisfied (use --upgrade to upgrade): pytest_bdd in c:\users\vladyslav.velychko\.jenkins\shiningpanda\jobs\52b83487\virtualenvs\d41d8cd9\lib\site-packages (from -r requirements.txt (line 2))
+Requirement already satisfied (use --upgrade to upgrade): selenium in c:\users\vladyslav.velychko\.jenkins\shiningpanda\jobs\52b83487\virtualenvs\d41d8cd9\lib\site-packages (from -r requirements.txt (line 3))
+Requirement already satisfied (use --upgrade to upgrade): jsonpickle in c:\users\vladyslav.velychko\.jenkins\shiningpanda\jobs\52b83487\virtualenvs\d41d8cd9\lib\site-packages (from -r requirements.txt (line 4))
+Requirement already satisfied (use --upgrade to upgrade): pony in c:\users\vladyslav.velychko\.jenkins\shiningpanda\jobs\52b83487\virtualenvs\d41d8cd9\lib\site-packages (from -r requirements.txt (line 5))
+Requirement already satisfied (use --upgrade to upgrade): pymysql in c:\users\vladyslav.velychko\.jenkins\shiningpanda\jobs\52b83487\virtualenvs\d41d8cd9\lib\site-packages (from -r requirements.txt (line 6))
+Requirement already satisfied (use --upgrade to upgrade): mysql-connector-python-rf in c:\users\vladyslav.velychko\.jenkins\shiningpanda\jobs\52b83487\virtualenvs\d41d8cd9\lib\site-packages (from -r requirements.txt (line 7))
+Requirement already satisfied (use --upgrade to upgrade): py>=1.4.29 in c:\users\vladyslav.velychko\.jenkins\shiningpanda\jobs\52b83487\virtualenvs\d41d8cd9\lib\site-packages (from pytest->-r requirements.txt (line 1))
+Requirement already satisfied (use --upgrade to upgrade): colorama; sys_platform == "win32" in c:\users\vladyslav.velychko\.jenkins\shiningpanda\jobs\52b83487\virtualenvs\d41d8cd9\lib\site-packages (from pytest->-r requirements.txt (line 1))
+Requirement already satisfied (use --upgrade to upgrade): parse-type in c:\users\vladyslav.velychko\.jenkins\shiningpanda\jobs\52b83487\virtualenvs\d41d8cd9\lib\site-packages (from pytest_bdd->-r requirements.txt (line 2))
+Requirement already satisfied (use --upgrade to upgrade): six>=1.9.0 in c:\users\vladyslav.velychko\.jenkins\shiningpanda\jobs\52b83487\virtualenvs\d41d8cd9\lib\site-packages (from pytest_bdd->-r requirements.txt (line 2))
+Requirement already satisfied (use --upgrade to upgrade): Mako in c:\users\vladyslav.velychko\.jenkins\shiningpanda\jobs\52b83487\virtualenvs\d41d8cd9\lib\site-packages (from pytest_bdd->-r requirements.txt (line 2))
+Requirement already satisfied (use --upgrade to upgrade): parse in c:\users\vladyslav.velychko\.jenkins\shiningpanda\jobs\52b83487\virtualenvs\d41d8cd9\lib\site-packages (from pytest_bdd->-r requirements.txt (line 2))
+Requirement already satisfied (use --upgrade to upgrade): glob2 in c:\users\vladyslav.velychko\.jenkins\shiningpanda\jobs\52b83487\virtualenvs\d41d8cd9\lib\site-packages (from pytest_bdd->-r requirements.txt (line 2))
+Requirement already satisfied (use --upgrade to upgrade): MarkupSafe>=0.9.2 in c:\users\vladyslav.velychko\.jenkins\shiningpanda\jobs\52b83487\virtualenvs\d41d8cd9\lib\site-packages (from Mako->pytest_bdd->-r requirements.txt (line 2))
+
+C:\Users\vladyslav.velychko\.jenkins\workspace\addressbook bdd tests>py.test --cucumberjson=results.json --junitxml=results.xml bdd\Contacts_bdd\contacts_scenarios.py 
+============================= test session starts =============================
+platform win32 -- Python 3.5.2, pytest-3.0.3, py-1.4.31, pluggy-0.4.0
+rootdir: C:\Users\vladyslav.velychko\.jenkins\workspace\addressbook bdd tests, inifile: 
+plugins: bdd-2.18.0
+collected 3 items
+
+bdd\Contacts_bdd\contacts_scenarios.py ...
+
+ generated json file: C:\Users\vladyslav.velychko\.jenkins\workspace\addressbook bdd tests\results.json 
+ generated xml file: C:\Users\vladyslav.velychko\.jenkins\workspace\addressbook bdd tests\results.xml 
+========================== 3 passed in 15.55 seconds ==========================
+
+C:\Users\vladyslav.velychko\.jenkins\workspace\addressbook bdd tests>exit 0 
+[Cucumber Tests] Parsing results.
+[Cucumber Tests] parsing results.json
+Recording test results
+[CucumberReport] Preparing Cucumber Reports
+[CucumberReport] Copied 4 json files from "C:\Users\vladyslav.velychko\.jenkins\workspace\addressbook bdd tests" to reports directory "C:\Users\vladyslav.velychko\.jenkins\jobs\addressbook bdd tests\builds\3"
+[CucumberReport] Found 1 json files.
+Finished: SUCCESS
