@@ -1,0 +1,64 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1477428389825" stop="1477428405873">
+  <name>tests.tests_contact.test_add_contact</name>
+  <test-cases>
+    <test-case start="1477428389825" status="passed" stop="1477428400850">
+      <name>test_add_contact[None:name!}(:s_name=[q:addressCkw2[:mail1@|VzM:mail2@T~mail3@C2Rp:w_phone156:s_phone:phone07m_phone2--]</name>
+      <steps>
+        <step start="1477428396191" status="passed" stop="1477428396194">
+          <title>Given a contact list</title>
+          <name>Given a contact list</name>
+          <steps/>
+          <attachments/>
+        </step>
+        <step start="1477428396194" status="passed" stop="1477428400847">
+          <title>When I add the contact None:name!}(:s_name=[q:addressCkw2[:mail1@|VzM:mail2@T~mail3@C2Rp:w_phone156:s_phone:phone07m_phone2-- to the list</title>
+          <name>When I add the contact None:name!}(:s_name=[q:addressCkw2[:mail1@|VzM:mail2@T~mail3@C2Rp:w_phone156:s_phone:phone07m_phone2-- to the list</name>
+          <steps/>
+          <attachments/>
+        </step>
+        <step start="1477428400847" status="passed" stop="1477428400850">
+          <title>Then the new contact list is equal to the old list with the added contact</title>
+          <name>Then the new contact list is equal to the old list with the added contact</name>
+          <steps/>
+          <attachments/>
+        </step>
+      </steps>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="5824-MainThread"/>
+        <label name="host" value="DESKTOP-TJ5GP1I"/>
+      </labels>
+    </test-case>
+    <test-case start="1477428400851" status="passed" stop="1477428405873">
+      <name>test_add_contact[None:nameZ  4^tG9:s_nameC}:addressm:U:mail1@:mail2@xRmail3@W%o:w_phone54:s_phone3889:phone857-m_phone2--]</name>
+      <steps>
+        <step start="1477428401496" status="passed" stop="1477428401498">
+          <title>Given a contact list</title>
+          <name>Given a contact list</name>
+          <steps/>
+          <attachments/>
+        </step>
+        <step start="1477428401498" status="passed" stop="1477428405870">
+          <title>When I add the contact None:nameZ  4^tG9:s_nameC}:addressm:U:mail1@:mail2@xRmail3@W%o:w_phone54:s_phone3889:phone857-m_phone2-- to the list</title>
+          <name>When I add the contact None:nameZ  4^tG9:s_nameC}:addressm:U:mail1@:mail2@xRmail3@W%o:w_phone54:s_phone3889:phone857-m_phone2-- to the list</name>
+          <steps/>
+          <attachments/>
+        </step>
+        <step start="1477428405870" status="passed" stop="1477428405872">
+          <title>Then the new contact list is equal to the old list with the added contact</title>
+          <name>Then the new contact list is equal to the old list with the added contact</name>
+          <steps/>
+          <attachments/>
+        </step>
+      </steps>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="5824-MainThread"/>
+        <label name="host" value="DESKTOP-TJ5GP1I"/>
+      </labels>
+    </test-case>
+  </test-cases>
+  <labels/>
+</ns0:test-suite>

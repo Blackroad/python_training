@@ -1,0 +1,89 @@
+{
+  "uid" : "9333b21b8cc066d",
+  "name" : "test_add_group[None:namek:header:footer]",
+  "title" : "Test add group [None:namek:header:footer]",
+  "time" : {
+    "start" : 1477427083977,
+    "stop" : 1477427092196,
+    "duration" : 8219
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 3
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "7c2ac2d6671c5440",
+    "name" : "tests.tests_group.test_add_group",
+    "title" : "Test add group"
+  },
+  "steps" : [ {
+    "name" : "Given a group list",
+    "title" : "Given a group list",
+    "time" : {
+      "start" : 1477427090526,
+      "stop" : 1477427090528,
+      "duration" : 2
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "When I add the group None:namek:header:footer to the list",
+    "title" : "When I add the group None:namek:header:footer to the list",
+    "time" : {
+      "start" : 1477427090528,
+      "stop" : 1477427092193,
+      "duration" : 1665
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Then the new group list is equal to the old list with the added group",
+    "title" : "Then the new group list is equal to the old list with the added group",
+    "time" : {
+      "start" : 1477427092193,
+      "stop" : 1477427092195,
+      "duration" : 2
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "tests.tests_group.test_add_group"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-TJ5GP1I"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "7116-MainThread"
+  } ],
+  "parameters" : [ ]
+}

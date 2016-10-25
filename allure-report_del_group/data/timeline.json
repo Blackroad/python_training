@@ -1,0 +1,20 @@
+{
+  "hosts" : [ {
+    "title" : "DESKTOP-TJ5GP1I",
+    "threads" : [ {
+      "title" : "11640-MainThread",
+      "testCases" : [ {
+        "uid" : "ea1f571143d9810",
+        "name" : "test_delete_some_group",
+        "title" : "Test delete some group",
+        "time" : {
+          "start" : 1477426813974,
+          "stop" : 1477426821593,
+          "duration" : 7619
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      } ]
+    } ]
+  } ]
+}

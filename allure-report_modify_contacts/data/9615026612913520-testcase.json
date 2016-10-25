@@ -1,0 +1,104 @@
+{
+  "uid" : "9615026612913520",
+  "name" : "test_modify_contacts_first_name",
+  "title" : "Test modify contacts first name",
+  "time" : {
+    "start" : 1477428252894,
+    "stop" : 1477428260582,
+    "duration" : 7688
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 4
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "e8e0ebb26944af77",
+    "name" : "tests.tests_contact.test_modify_contacts",
+    "title" : "Test modify contacts"
+  },
+  "steps" : [ {
+    "name" : "Given a contact list",
+    "title" : "Given a contact list",
+    "time" : {
+      "start" : 1477428259224,
+      "stop" : 1477428259226,
+      "duration" : 2
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Given a random contact from the list",
+    "title" : "Given a random contact from the list",
+    "time" : {
+      "start" : 1477428259226,
+      "stop" : 1477428259226,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "When I modify the contact with id 282 from the list with 282:1sad:edited:None:None:NoneNone:None:None:NoneNone contact data",
+    "title" : "When I modify the contact with id 282 from the list with 282:1sad:edited:None:None:NoneNone:None:None:NoneNone contact data",
+    "time" : {
+      "start" : 1477428259226,
+      "stop" : 1477428260375,
+      "duration" : 1149
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Then list with modified contact list is equal to the old list with not modified contact",
+    "title" : "Then list with modified contact list is equal to the old list with not modified contact",
+    "time" : {
+      "start" : 1477428260375,
+      "stop" : 1477428260582,
+      "duration" : 207
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "DESKTOP-TJ5GP1I"
+  }, {
+    "name" : "thread",
+    "value" : "13792-MainThread"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "suite-name",
+    "value" : "tests.tests_contact.test_modify_contacts"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  } ],
+  "parameters" : [ ]
+}

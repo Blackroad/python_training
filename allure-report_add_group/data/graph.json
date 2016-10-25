@@ -1,0 +1,36 @@
+{
+  "testCases" : [ {
+    "uid" : "9333b21b8cc066d",
+    "name" : "test_add_group[None:namek:header:footer]",
+    "title" : "Test add group [None:namek:header:footer]",
+    "time" : {
+      "start" : 1477427083977,
+      "stop" : 1477427092196,
+      "duration" : 8219
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "4d9e1af59c3f7eef",
+    "name" : "test_add_group[None:namefa:headerN:footerik]",
+    "title" : "Test add group [None:namefa:headerN:footerik]",
+    "time" : {
+      "start" : 1477427092197,
+      "stop" : 1477427094041,
+      "duration" : 1844
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "284521f58b011063",
+    "name" : "test_add_group[None:nameD:header:footer]",
+    "title" : "Test add group [None:nameD:header:footer]",
+    "time" : {
+      "start" : 1477427094042,
+      "stop" : 1477427095803,
+      "duration" : 1761
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  } ]
+}

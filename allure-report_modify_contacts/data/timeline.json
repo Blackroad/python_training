@@ -1,0 +1,20 @@
+{
+  "hosts" : [ {
+    "title" : "DESKTOP-TJ5GP1I",
+    "threads" : [ {
+      "title" : "13792-MainThread",
+      "testCases" : [ {
+        "uid" : "9615026612913520",
+        "name" : "test_modify_contacts_first_name",
+        "title" : "Test modify contacts first name",
+        "time" : {
+          "start" : 1477428252894,
+          "stop" : 1477428260582,
+          "duration" : 7688
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      } ]
+    } ]
+  } ]
+}

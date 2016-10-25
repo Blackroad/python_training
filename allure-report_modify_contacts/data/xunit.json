@@ -1,0 +1,38 @@
+{
+  "time" : {
+    "start" : 1477428252894,
+    "stop" : 1477428260582,
+    "duration" : 7688
+  },
+  "testSuites" : [ {
+    "uid" : "e8e0ebb26944af77",
+    "name" : "tests.tests_contact.test_modify_contacts",
+    "title" : "Test modify contacts",
+    "time" : {
+      "start" : 1477428252894,
+      "stop" : 1477428260582,
+      "duration" : 7688
+    },
+    "statistic" : {
+      "total" : 1,
+      "passed" : 1,
+      "pending" : 0,
+      "canceled" : 0,
+      "failed" : 0,
+      "broken" : 0
+    },
+    "description" : null,
+    "testCases" : [ {
+      "uid" : "9615026612913520",
+      "name" : "test_modify_contacts_first_name",
+      "title" : "Test modify contacts first name",
+      "time" : {
+        "start" : 1477428252894,
+        "stop" : 1477428260582,
+        "duration" : 7688
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    } ]
+  } ]
+}

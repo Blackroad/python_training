@@ -1,0 +1,89 @@
+{
+  "uid" : "c367c5263c1f4d2d",
+  "name" : "test_add_contact[None:nameZ  4^tG9:s_nameC}:addressm:U:mail1@:mail2@xRmail3@W%o:w_phone54:s_phone3889:phone857-m_phone2--]",
+  "title" : "Test add contact [None:nameZ  4^tG9:s_nameC}:addressm:U:mail1@:mail2@xRmail3@W%o:w_phone54:s_phone3889:phone857-m_phone2--]",
+  "time" : {
+    "start" : 1477428400851,
+    "stop" : 1477428405873,
+    "duration" : 5022
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 3
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "e9a8977592de35c6",
+    "name" : "tests.tests_contact.test_add_contact",
+    "title" : "Test add contact"
+  },
+  "steps" : [ {
+    "name" : "Given a contact list",
+    "title" : "Given a contact list",
+    "time" : {
+      "start" : 1477428401496,
+      "stop" : 1477428401498,
+      "duration" : 2
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "When I add the contact None:nameZ  4^tG9:s_nameC}:addressm:U:mail1@:mail2@xRmail3@W%o:w_phone54:s_phone3889:phone857-m_phone2-- to the list",
+    "title" : "When I add the contact None:nameZ  4^tG9:s_nameC}:addressm:U:mail1@:mail2@xRmail3@W%o:w_phone54:s_phone3889:phone857-m_phone2-- to the list",
+    "time" : {
+      "start" : 1477428401498,
+      "stop" : 1477428405870,
+      "duration" : 4372
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Then the new contact list is equal to the old list with the added contact",
+    "title" : "Then the new contact list is equal to the old list with the added contact",
+    "time" : {
+      "start" : 1477428405870,
+      "stop" : 1477428405872,
+      "duration" : 2
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "tests.tests_contact.test_add_contact"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-TJ5GP1I"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "thread",
+    "value" : "5824-MainThread"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  } ],
+  "parameters" : [ ]
+}

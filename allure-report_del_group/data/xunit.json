@@ -1,0 +1,38 @@
+{
+  "time" : {
+    "start" : 1477426813974,
+    "stop" : 1477426821593,
+    "duration" : 7619
+  },
+  "testSuites" : [ {
+    "uid" : "1f68d274f5996c3f",
+    "name" : "tests.tests_group.test_del_group",
+    "title" : "Test del group",
+    "time" : {
+      "start" : 1477426813974,
+      "stop" : 1477426821593,
+      "duration" : 7619
+    },
+    "statistic" : {
+      "total" : 1,
+      "passed" : 1,
+      "pending" : 0,
+      "canceled" : 0,
+      "failed" : 0,
+      "broken" : 0
+    },
+    "description" : null,
+    "testCases" : [ {
+      "uid" : "ea1f571143d9810",
+      "name" : "test_delete_some_group",
+      "title" : "Test delete some group",
+      "time" : {
+        "start" : 1477426813974,
+        "stop" : 1477426821593,
+        "duration" : 7619
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    } ]
+  } ]
+}

@@ -1,0 +1,44 @@
+{
+  "uid" : "84d63fbb61b37cfb",
+  "name" : "test_add_contact[None:nameZ  4^tG9:s_nameC}:addressm:U:mail1@:mail2@xRmail3@W%o:w_phone54:s_phone3889:phone857-m_phone2--]",
+  "title" : "Test add contact [None:nameZ  4^tG9:s_nameC}:addressm:U:mail1@:mail2@xRmail3@W%o:w_phone54:s_phone3889:phone857-m_phone2--]",
+  "time" : {
+    "start" : 1477424996838,
+    "stop" : 1477425002006,
+    "duration" : 5168
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "b052b8e5ef03ebd2",
+    "name" : "tests.tests_contact.test_add_contact",
+    "title" : "Test add contact"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "tests.tests_contact.test_add_contact"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-TJ5GP1I"
+  }, {
+    "name" : "thread",
+    "value" : "13156-MainThread"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  } ],
+  "parameters" : [ ]
+}

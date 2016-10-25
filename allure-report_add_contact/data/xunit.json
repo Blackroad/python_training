@@ -1,0 +1,49 @@
+{
+  "time" : {
+    "start" : 1477428389825,
+    "stop" : 1477428405873,
+    "duration" : 16048
+  },
+  "testSuites" : [ {
+    "uid" : "e9a8977592de35c6",
+    "name" : "tests.tests_contact.test_add_contact",
+    "title" : "Test add contact",
+    "time" : {
+      "start" : 1477428389825,
+      "stop" : 1477428405873,
+      "duration" : 16048
+    },
+    "statistic" : {
+      "total" : 2,
+      "passed" : 2,
+      "pending" : 0,
+      "canceled" : 0,
+      "failed" : 0,
+      "broken" : 0
+    },
+    "description" : null,
+    "testCases" : [ {
+      "uid" : "510b0e05e62ed34d",
+      "name" : "test_add_contact[None:name!}(:s_name=[q:addressCkw2[:mail1@|VzM:mail2@T~mail3@C2Rp:w_phone156:s_phone:phone07m_phone2--]",
+      "title" : "Test add contact [None:name!}(:s name=[q:address ckw 2 [:mail1@|VzM:mail2@T~mail3@C2Rp:w_phone156:s_phone:phone07m_phone2--]",
+      "time" : {
+        "start" : 1477428389825,
+        "stop" : 1477428400850,
+        "duration" : 11025
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    }, {
+      "uid" : "c367c5263c1f4d2d",
+      "name" : "test_add_contact[None:nameZ  4^tG9:s_nameC}:addressm:U:mail1@:mail2@xRmail3@W%o:w_phone54:s_phone3889:phone857-m_phone2--]",
+      "title" : "Test add contact [None:nameZ  4^tG9:s_nameC}:addressm:U:mail1@:mail2@xRmail3@W%o:w_phone54:s_phone3889:phone857-m_phone2--]",
+      "time" : {
+        "start" : 1477428400851,
+        "stop" : 1477428405873,
+        "duration" : 5022
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    } ]
+  } ]
+}

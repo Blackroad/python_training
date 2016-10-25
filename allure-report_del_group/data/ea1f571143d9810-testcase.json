@@ -1,0 +1,104 @@
+{
+  "uid" : "ea1f571143d9810",
+  "name" : "test_delete_some_group",
+  "title" : "Test delete some group",
+  "time" : {
+    "start" : 1477426813974,
+    "stop" : 1477426821593,
+    "duration" : 7619
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 4
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "1f68d274f5996c3f",
+    "name" : "tests.tests_group.test_del_group",
+    "title" : "Test del group"
+  },
+  "steps" : [ {
+    "name" : "Given a group list",
+    "title" : "Given a group list",
+    "time" : {
+      "start" : 1477426820506,
+      "stop" : 1477426820507,
+      "duration" : 1
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Given a random group from the list",
+    "title" : "Given a random group from the list",
+    "time" : {
+      "start" : 1477426820507,
+      "stop" : 1477426820507,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "When I delete the group with id= 191 from the list",
+    "title" : "When I delete the group with id= 191 from the list",
+    "time" : {
+      "start" : 1477426820507,
+      "stop" : 1477426821242,
+      "duration" : 735
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Then the new group list is equal to the old list without deleted group",
+    "title" : "Then the new group list is equal to the old list without deleted group",
+    "time" : {
+      "start" : 1477426821244,
+      "stop" : 1477426821592,
+      "duration" : 348
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "DESKTOP-TJ5GP1I"
+  }, {
+    "name" : "suite-name",
+    "value" : "tests.tests_group.test_del_group"
+  }, {
+    "name" : "thread",
+    "value" : "11640-MainThread"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  } ],
+  "parameters" : [ ]
+}
