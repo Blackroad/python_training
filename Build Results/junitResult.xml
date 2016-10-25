@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<result plugin="junit@1.19">
+  <suites>
+    <suite>
+      <file>C:\Users\vladyslav.velychko\.jenkins\workspace\addressbook bdd tests\results.xml</file>
+      <name>pytest</name>
+      <duration>15.547</duration>
+      <time>15.547</time>
+      <cases>
+        <case>
+          <duration>10.734011</duration>
+          <className>bdd.Contacts_bdd.contacts_scenarios</className>
+          <testName>test_add_new_contact[nameesq-true-nick123]</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.66837454</duration>
+          <className>bdd.Contacts_bdd.contacts_scenarios</className>
+          <testName>test_delete_contact</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>3.9472342</duration>
+          <className>bdd.Contacts_bdd.contacts_scenarios</className>
+          <testName>test_modify_contact</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+      </cases>
+    </suite>
+  </suites>
+  <duration>15.547</duration>
+  <keepLongStdio>false</keepLongStdio>
+</result>
